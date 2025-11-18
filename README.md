@@ -26,49 +26,50 @@ Engineering blogs from major tech companies publish valuable, practical systems 
 
 ## Project structure
 
-ech-blog-knowledge-extractor/
+tech-blog-knowledge-extractor/
 │
 ├── data/
-│ ├── raw/ # Unprocessed blog posts
-│ ├── processed/ # Cleaned, chunked text
-│ └── metadata/ # Tags, dates, categories
+│   ├── raw/                 # Unprocessed blog posts
+│   ├── processed/           # Cleaned, chunked text
+│   └── metadata/            # Tags, dates, categories
 │
 ├── ingestion/
-│ ├── fetch_netflix.py
-│ ├── fetch_airbnb.py
-│ ├── fetch_uber.py
-│ └── clean_text.py
+│   ├── fetch_netflix.py
+│   ├── fetch_airbnb.py
+│   ├── fetch_uber.py
+│   └── clean_text.py
 │
 ├── rag/
-│ ├── embedder.py # Embedding model wrapper
-│ ├── vectorstore.py # Vector DB operations
-│ └── retriever.py
+│   ├── embedder.py          # Embedding model wrapper
+│   ├── vectorstore.py       # Vector DB operations
+│   └── retriever.py
 │
 ├── knowledge_graph/
-│ ├── entity_extraction.py
-│ ├── relation_extraction.py
-│ ├── graph_builder.py
-│ └── neo4j_interface.py
+│   ├── entity_extraction.py
+│   ├── relation_extraction.py
+│   ├── graph_builder.py
+│   └── neo4j_interface.py
 │
 ├── summaries/
-│ ├── summarize_topics.py # DS/ML, AI Infra, Data Eng, etc.
-│ ├── compare_companies.py
-│ └── monthly_report.py
+│   ├── summarize_topics.py  # DS/ML, AI Infra, Data Eng, etc.
+│   ├── compare_companies.py
+│   └── monthly_report.py
 │
 ├── app/
-│ └── streamlit_app.py # Optional UI for search and summarization
+│   └── streamlit_app.py     # Optional UI for search and summarization
 │
 ├── configs/
-│ ├── model_config.yaml
-│ ├── ingestion_config.yaml
-│ └── graph_config.yaml
+│   ├── model_config.yaml
+│   ├── ingestion_config.yaml
+│   └── graph_config.yaml
 │
 ├── notebooks/
-│ ├── exploratory_analysis.ipynb
-│ └── demo_queries.ipynb
+│   ├── exploratory_analysis.ipynb
+│   └── demo_queries.ipynb
 │
 ├── tests/
-│ └── test_extraction.py
+│   └── test_extraction.py
 │
 ├── requirements.txt
-└── README.md
+├── README.md
+└── LICENSE
