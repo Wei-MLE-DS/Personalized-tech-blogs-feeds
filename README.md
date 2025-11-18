@@ -1,7 +1,7 @@
 # Tech Blog Knowledge Extractor: SLM + RAG + Knowledge Graph
 
-This repository implements a lightweight intelligence system that extracts, organizes, and summarizes technical knowledge from engineering blogs (Netflix, Airbnb, Uber).  
-The project is focused on distilling DS/ML, AI, and platform-engineering innovations into a structured, queryable knowledge base using:
+This repository implements a lightweight intelligence system that extracts, organizes, and summarizes technical knowledge from engineering blogs published by Netflix, Airbnb, and Uber.  
+The project focuses on distilling DS/ML, AI, and platform-engineering innovations into a structured, queryable knowledge base using:
 
 - Small Language Models (SLMs)
 - Retrieval-Augmented Generation (RAG)
@@ -9,23 +9,33 @@ The project is focused on distilling DS/ML, AI, and platform-engineering innovat
 
 ## Project purpose
 
-Engineering blogs from major tech companies publish valuable, practical systems knowledge that is often scattered and hard to compare. This project aims to:
+Engineering blogs from major tech companies publish valuable, practical systems knowledge, but the information is scattered, inconsistent, and hard to compare. This project aims to:
 
-1. Automatically ingest and categorize blog posts (DS/ML, Data Engineering, Infrastructure, etc.).  
-2. Extract entities, relations, and system patterns and store them in a knowledge graph.  
-3. Index content for semantic retrieval and support RAG-based Q&A.  
-4. Produce concise summaries and monthly insights to help practitioners learn industry patterns quickly.
+1. Automatically ingest and categorize blog posts into DS/ML, Data Engineering, AI Infrastructure, and other themes.  
+2. Extract entities, relationships, workflows, and system design patterns into a knowledge graph.  
+3. Index the content in a vector database to support semantic search and RAG-based querying.  
+4. Produce summaries, topic-level insights, and optional monthly reports to track evolving engineering patterns.
 
 ## System architecture (high-level)
 
-1. Data ingestion: fetch blog posts and metadata, clean and chunk text.  
-2. RAG layer: create embeddings, store chunks in a vector database, enable retrieval.  
-3. Knowledge graph: extract triplets (subject–relation–object) and build a graph for relation queries and cross-company comparison.  
-4. Query engine: hybrid retrieval (vector + KG) to generate grounded answers and summaries.  
-5. Presentation: optional Streamlit UI, static site, and monthly reports.
+**1. Data ingestion**  
+Fetch blog posts from Netflix, Airbnb, and Uber; parse text and metadata; clean and chunk text.
+
+**2. RAG layer**  
+Generate embeddings using an SLM; store text and embeddings in a vector database; retrieve relevant chunks.
+
+**3. Knowledge graph**  
+Extract entities and relations; construct a graph using triplets (subject–relation–object); enable relation queries.
+
+**4. Query and summarization engine**  
+Hybrid retrieval using both vector search and graph traversal; provide structured explanations and comparisons.
+
+**5. Presentation layer**  
+Optional Streamlit app for search, visualization, and summarization.
 
 ## Project structure
 
+```
 tech-blog-knowledge-extractor/
 │
 ├── data/
@@ -71,5 +81,5 @@ tech-blog-knowledge-extractor/
 │   └── test_extraction.py
 │
 ├── requirements.txt
-├── README.md
-└── LICENSE
+└── README.md
+```
